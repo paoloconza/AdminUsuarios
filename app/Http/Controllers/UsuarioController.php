@@ -40,9 +40,16 @@ class UsuarioController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Usuario $usuario)
+    public function show($id)
     {
-        //
+        $usuario = Usuario::find($id);
+        return $usuario;
+        // $usuario->response();
+        // if ($usuario) {
+        //     return response()->json($usuario);
+        // } else {
+        //     return response()->json(['error' => 'Usuario no encontrado'], 404);
+        // }
     }
 
     /**
